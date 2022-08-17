@@ -14,9 +14,8 @@ export class AppComponent implements OnInit {
   ) { }
 
   dataForm: any = FormGroup
-  id='1-BFkCxnwNchYkVfEZqbkoYuyBQRGQnAz'
+  id = '19B4pBVl0_42jYDWqRvG2CTWTpduRoDIp'
   voice: string[] = ["Joey", "Joanna", "Ivy"]
-  fileUrl: any;
   selectedVoice = ''
   audio = new Audio()
   ngOnInit(): void {
@@ -38,5 +37,11 @@ export class AppComponent implements OnInit {
     //     saveAs(file)
     //   }
     // })
+  }
+
+  onplay() {
+    this.audio.src = `https://docs.google.com/uc?export=download&id=${this.id}`
+    this.audio.load()
+    this.audio.play()
   }
 }
