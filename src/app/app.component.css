@@ -24,7 +24,6 @@ textarea {
     background-color: #FFFFFF;
 }
 
-
 textarea:focus {
     background: none repeat scroll 0 0 #FFFFFF;
     outline-width: 0;
@@ -32,16 +31,18 @@ textarea:focus {
 }
 
 textarea:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-h4 {
-    margin-left: 450px
+    transform: scale(1.1);
+    filter: drop-shadow(2px 3px 3px #333);
 }
 
 select {
     margin-left: 450px
+}
+
+audio:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(2px 3px 3px #333);
+    transition: all 0.5s linear;
 }
 
 #btn {
@@ -51,8 +52,8 @@ select {
 }
 
 #btn:hover {
-    background-color: #008CBA;
-    color: white;
+    transform: scale(1.1);
+    filter: drop-shadow(2px 3px 3px #333);
 }
 
 #select {
@@ -72,26 +73,15 @@ select {
 }
 
 #select:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.container {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-
+    transform: scale(1.1);
+    filter: drop-shadow(2px 3px 3px #333);
 }
 
 .image {
-    /* background-image: url('https://media.istockphoto.com/photos/sound-wave-blue-blur-background-picture-id1363923250?b=1&k=20&m=1363923250&s=170667a&w=0&h=_KZYLZotmtGf7mnaoiyJEgeSU6zDVWKNj0a-mvXc5Ls='); */
-    /* filter: blur(3px); */
-    /* Full height */
-    height: 900px;
+    background-image: url('https://media.istockphoto.com/photos/sound-wave-blue-blur-background-picture-id1363923250?b=1&k=20&m=1363923250&s=170667a&w=0&h=_KZYLZotmtGf7mnaoiyJEgeSU6zDVWKNj0a-mvXc5Ls=');
+    height: 100%;
     width: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
+    padding-left: 380px;
     background-repeat: no-repeat;
     background-size: cover;
 }
