@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { saveAs } from 'file-saver';
 import { PollyService } from './polly.service';
 
 @Component({
@@ -15,6 +14,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   dataForm: any = FormGroup
+  id='1-BFkCxnwNchYkVfEZqbkoYuyBQRGQnAz'
   voice: string[] = ["Joey", "Joanna", "Ivy"]
   fileUrl: any;
   selectedVoice = ''

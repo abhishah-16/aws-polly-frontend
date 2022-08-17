@@ -1,6 +1,6 @@
 textarea {
     margin-top: 50px;
-    margin-left:50px;
+    margin-left: 50px;
     width: 900px;
     height: 100px;
     -moz-border-bottom-colors: none;
@@ -21,6 +21,7 @@ textarea {
     padding: 5px 8px;
     transition: background-color 0.2s ease 0s;
     box-shadow: 5px 5px 5px #888888;
+    background-color: #FFFFFF;
 }
 
 
@@ -75,13 +76,22 @@ select {
     color: white;
 }
 
-audio:hover {
-    background-color: #008CBA;
-    color: white;
-}
 .container {
     margin: auto;
     width: 60%;
-    border: 3px solid #73AD21;
     padding: 10px;
-  }
+
+}
+
+.image {
+    /* background-image: url('https://media.istockphoto.com/photos/sound-wave-blue-blur-background-picture-id1363923250?b=1&k=20&m=1363923250&s=170667a&w=0&h=_KZYLZotmtGf7mnaoiyJEgeSU6zDVWKNj0a-mvXc5Ls='); */
+    /* filter: blur(3px); */
+    /* Full height */
+    height: 900px;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

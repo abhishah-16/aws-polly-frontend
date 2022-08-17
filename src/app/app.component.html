@@ -1,27 +1,30 @@
-<div style="float:center;box-shadow: 5px 5px 5px #888888;">
-  <div class="container">
-    <form [formGroup]="dataForm">
-      <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" rows="20"
-        name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox"
-        aria-autocomplete="list" aria-haspopup="true"></textarea>
+<div class="image">
+  <div style="float:center;box-shadow: 5px 5px 5px #888888;">
+    <div class="container">
+      <form [formGroup]="dataForm">
+        <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" rows="20"
+          name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off"
+          role="textbox" aria-autocomplete="list" aria-haspopup="true"></textarea>
+        <br><br><br>
+      </form>
+      <div class="dropdown">
+        <select name="" id="select" [(ngModel)]="selectedVoice">
+          <option value="" disabled>voice</option>
+          <option value={{item}} *ngFor="let item of voice">{{item}}</option>
+        </select>
+      </div>
       <br><br>
-    </form>
-    <h4>Select Voice</h4>
-    <div class="dropdown">
-      <select name="" id="select" [(ngModel)]="selectedVoice">
-        <option value="" disabled>voice</option>
-        <option value={{item}} *ngFor="let item of voice">{{item}}</option>
-      </select>
+      <button id="btn" style="margin-left:450px" (click)="onSubmit()">Speak Now</button><br><br>
     </div>
-    <br><br>
-    <button id="btn" style="margin-left:450px" (click)="onSubmit()">Speak Now</button><br><br>
+    <hr>
   </div>
-  
-  <hr>
+  <br><br>
+  <div class="" style="margin-left:700px">
+    <audio controls>
+      <source src="https://docs.google.com/uc?export=download&id={{id}}"
+        type="audio/mp3">
+    </audio><br>  
+  </div>
 </div>
-<br><br>
-<div class="" style="margin-left:700px">
-  <audio controls>
-    <source src="" type="audio/mpeg">
-  </audio>
-</div>
+
+<!-- 10eeWfZi9DOjtpI_SccVoq5loBBtAYMr8 -->
