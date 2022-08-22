@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   voice: string[] = ["Joey", "Joanna", "Ivy"]
   selectedVoice = ''
   audio = new Audio()
+  error: any = ''
   ngOnInit(): void {
     this.dataForm = this.formbuilder.group({
       text: [null, Validators.required]
@@ -25,22 +26,27 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
-    // const formdata = this.dataForm.value
-    // const data = {
-    //   text: formdata.text,
-    //   voice: this.selectedVoice
-    // }
-    // console.log(data)
-    // this.api.speak(data).subscribe((res: any) => {
-    //   if (res.AudioStream) {
-    //     const file = new File(res.AudioStream.data, 'polly.mp3')
-    //     saveAs(file)
-    //   }
-    // })
+    const formdata = this.dataForm.value
+    const data = {
+      text: formdata.text,
+      voice: this.selectedVoice
+    }
+    console.log(data);
+    this.api.speak(data).subscribe((res: any) => {
+      if (res.message) {
+        this.error = res.message
+      } else {
+        this.id = res.id
+        this.error = null
+        this.onplay(this.id)
+      }
+    }, (error) => {
+      console.log(error)
+    })
   }
 
-  onplay() {
-    this.audio.src = `https://docs.google.com/uc?export=download&id=${this.id}`
+  onplay(id: string) {
+    this.audio.src = `https://docs.google.com/uc?export=download&id=${id}`
     this.audio.load()
     this.audio.play()
   }

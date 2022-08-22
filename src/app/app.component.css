@@ -33,6 +33,7 @@ textarea:focus {
 textarea:hover {
     transform: scale(1.1);
     filter: drop-shadow(2px 3px 3px #333);
+    transition: all 0.5s linear;
 }
 
 select {
@@ -84,4 +85,12 @@ audio:hover {
     padding-left: 380px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+h3 {
+
+    background: -webkit-linear-gradient(blue, black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
