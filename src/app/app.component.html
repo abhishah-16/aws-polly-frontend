@@ -1,3 +1,7 @@
+<br><h3 class="text-center">
+   AWS Polly 
+</h3>
+<hr>
 <div class="image">
   <form [formGroup]="dataForm">
     <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" r ows="20"
@@ -17,14 +21,19 @@
     </select>
   </div>
   <br><br>
-  <button id="btn" style="margin-left:490px" (click)="onplay()">
+  <button id="btn" style="margin-left:490px" (click)="onSubmit()">
     Speak
   </button>
   <br><br>
 </div>
 <br><br>
-<div class="" style="margin-left:750px">
+<div class="image" style="padding:25px 0px 0px 750px;" *ngIf="error == null">
   <audio controls>
     <source src="https://docs.google.com/uc?export=download&id={{id}}" type="audio/mp3">
-  </audio><br>
+  </audio><br><br>
+</div><br><br>
+<div>
+  <h4 style="color:red;margin-left: 600px;">
+    {{error}}
+  </h4>
 </div>
