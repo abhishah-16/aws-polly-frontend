@@ -8,7 +8,7 @@ import { PollyService } from './polly.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
+  // 1BdiNwWK0toRNUfu_kFYdTTttWwXstNS3
   constructor(private formbuilder: FormBuilder,
     private api: PollyService,
   ) { }
@@ -31,7 +31,6 @@ export class AppComponent implements OnInit {
       text: formdata.text,
       voice: this.selectedVoice
     }
-    console.log(data);
     this.api.speak(data).subscribe((res: any) => {
       if (res.message) {
         this.error = res.message
