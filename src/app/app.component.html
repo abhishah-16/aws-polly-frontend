@@ -1,19 +1,20 @@
-<br><h3 class="text-center">
-   AWS Polly 
+<br>
+<h3 class="text-center">
+  AWS Polly
 </h3>
 <hr>
 <div class="image">
   <form [formGroup]="dataForm">
-    <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" r ows="20"
+    <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" rows="20"
       name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox"
-      aria-autocomplete="list" aria-haspopup="true">
-  </textarea>
+      aria-autocomplete="list" aria-haspopup="true" required>
+    </textarea>
     <br><br><br>
   </form>
   <div class="dropdown">
     <select name="" id="select" [(ngModel)]="selectedVoice">
       <option value="" disabled>
-        voice
+        voices
       </option>
       <option value={{item}} *ngFor="let item of voice">
         {{item}}
@@ -26,14 +27,16 @@
   </button>
   <br><br>
 </div>
-<br><br>
+<br>
 <div class="image" style="padding:25px 0px 0px 750px;" *ngIf="error == null">
   <audio controls>
     <source src="https://docs.google.com/uc?export=download&id={{id}}" type="audio/mp3">
-  </audio><br><br>
-</div><br><br>
-<div>
-  <h4 style="color:red;margin-left: 600px;">
+  </audio>
+  <br><br>
+</div>
+<br><br>
+<div class="image">
+  <h4 style="color:white;margin-left: 300px;">
     {{error}}
   </h4>
 </div>
