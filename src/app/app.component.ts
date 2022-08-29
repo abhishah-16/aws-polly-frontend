@@ -8,17 +8,18 @@ import { PollyService } from './polly.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  // 1BdiNwWK0toRNUfu_kFYdTTttWwXstNS3
-  constructor(private formbuilder: FormBuilder,
+  constructor(
+    private formbuilder: FormBuilder,
     private api: PollyService,
   ) { }
 
   dataForm: any = FormGroup
   id = '19B4pBVl0_42jYDWqRvG2CTWTpduRoDIp'
-  voice: string[] = ["Joey", "Joanna", "Ivy"]
+  voice: string[] = ["Joey", "Joanna", "Ivy","Matthew","Justin"]
   selectedVoice = ''
   audio = new Audio()
   error: any = ''
+
   ngOnInit(): void {
     this.dataForm = this.formbuilder.group({
       text: [null, Validators.required]

@@ -1,7 +1,7 @@
 textarea {
     margin-top: 50px;
-    margin-left: 50px;
-    width: 900px;
+    margin-left: 300px;
+    max-width: 95%;
     height: 100px;
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -30,14 +30,8 @@ textarea:focus {
     box-shadow: 5px 5px 5px #888888;
 }
 
-/* textarea:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(2px 3px 3px #333);
-    transition: all 0.5s linear;
-} */
-
 select {
-    margin-left: 450px
+    margin-left: 800px
 }
 
 audio:hover {
@@ -80,17 +74,21 @@ audio:hover {
 
 .image {
     background-image: url('https://media.istockphoto.com/photos/sound-wave-blue-blur-background-picture-id1363923250?b=1&k=20&m=1363923250&s=170667a&w=0&h=_KZYLZotmtGf7mnaoiyJEgeSU6zDVWKNj0a-mvXc5Ls=');
-    height: 100%;
-    width: 100%;
-    padding-left: 380px;
+    padding-left: auto;
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100%;
+    display: block;
+    height: auto;
 }
 
 h3 {
-
     background: -webkit-linear-gradient(blue, black);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+form {
+    margin-left: 350px
 }

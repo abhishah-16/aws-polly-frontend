@@ -3,14 +3,16 @@
   AWS Polly
 </h3>
 <hr>
-<div class="image">
-  <form [formGroup]="dataForm">
-    <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" rows="20"
-      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox"
-      aria-autocomplete="list" aria-haspopup="true" required>
+<div class="image container">
+  <div class="">
+    <form [formGroup]="dataForm">
+      <textarea formControlName="text" placeholder="Write your text that you want to convert to speech" rows="20"
+        name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input" autocomplete="off" role="textbox"
+        aria-autocomplete="list" aria-haspopup="true" required>
     </textarea>
-    <br><br><br>
-  </form>
+      <br><br><br>
+    </form>
+  </div>
   <div class="dropdown">
     <select name="" id="select" [(ngModel)]="selectedVoice">
       <option value="" disabled>
@@ -22,7 +24,7 @@
     </select>
   </div>
   <br><br>
-  <button id="btn" style="margin-left:490px" (click)="onSubmit()">
+  <button id="btn" style="margin-left:840px" (click)="onSubmit()">
     Speak
   </button>
   <br><br>
