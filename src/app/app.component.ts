@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
     })
   }
 
+  // click speak
   onplay(id: string) {
     this.audio.src = `https://docs.google.com/uc?export=download&id=${id}`
     this.audio.load()

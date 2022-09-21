@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PollyService {
-  url = "http://localhost:3000"
+  url = "https://amazon-polly-poc.herokuapp.com"
 
   constructor(private http: HttpClient) { }
 
